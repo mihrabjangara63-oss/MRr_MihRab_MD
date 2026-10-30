@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d17">
+<title>MRr MihRab MD | WhatsApp Bot</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg:#080d17;
+  --card:#101a29;
+  --blue:#328cff;
+  --green:#39e6a0;
+  --text:#f4f7ff;
+  --muted:#8c9bb1;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:'Vazirmatn',sans-serif;
+}
+header{
+  padding:20px 18px;display:flex;align-items:center;
+  justify-content:space-between;border-bottom:1px solid #202e42;
+  position:sticky;top:0;background:#080d17ee;z-index:5;
+}
+.logo{font-size:20px;font-weight:800;color:var(--green)}
+.logo span{color:var(--blue)}
+nav a{color:#b9c6d8;text-decoration:none;margin-right:12px;font-size:12px}
+.hero{
+  padding:65px 20px 45px;text-align:center;
+  background:radial-gradient(ellipse at top,#10345b 0%,transparent 70%);
+}
+.tag{
+  display:inline-block;padding:7px 15px;border:1px solid #245b79;
+  border-radius:30px;color:var(--green);font-size:12px;
+}
+h1{font-size:36px;margin:22px 0 10px}
+h1 span{color:var(--blue)}
+.hero p{color:var(--muted);line-height:2;font-size:14px}
+.btn{
+  display:inline-block;padding:12px 23px;border-radius:12px;
+  text-decoration:none;font-weight:700;margin:8px 4px;
+  border:1px solid var(--blue);color:white;background:#12335a;
+  font-family:inherit;cursor:pointer;
+}
+.btn.green{background:#103d31;border-color:var(--green);color:var(--green)}
+section{padding:28px 18px;max-width:850px;margin:auto}
+.heading{text-align:center;margin-bottom:24px}
+.heading h2{font-size:23px}
+.heading p{font-size:13px;color:var(--muted)}
+.grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:13px;
+}
+.card{
+  background:linear-gradient(145deg,#14243a,#0d1523);
+  border:1px solid #243a55;border-radius:17px;
+  padding:19px 13px;text-align:center;
+}
+.icon{font-size:30px}
+.card h3{margin:9px 0 4px;font-size:16px}
+.card p{font-size:12px;color:var(--muted);line-height:1.8}
+.status{
+  background:#101c2b;border:1px solid #29445b;
+  padding:17px;border-radius:15px;text-align:center;
+}
+.dot{
+  display:inline-block;width:9px;height:9px;
+  border-radius:50%;background:#f0bd4b;margin-left:7px;
+}
+.status p{font-size:13px;color:var(--muted)}
+.commands{
+  background:#0e1725;border:1px solid #263950;
+  padding:16px;border-radius:14px;direction:ltr;text-align:left;
+}
+.commands p{margin:12px 0;color:#b7d5fa;font-size:13px}
+.commands b{color:var(--green)}
+footer{
+  text-align:center;padding:30px 15px;
+  border-top:1px solid #223047;color:var(--muted);
+  font-size:12px;line-height:2.2;
+}
+.modal{
+  display:none;position:fixed;inset:0;background:#000c;
+  z-index:10;align-items:center;justify-content:center;padding:20px;
+}
+.modal-box{
+  background:#142238;border:1px solid #31557c;
+  border-radius:18px;padding:24px;max-width:380px;width:100%;
+  text-align:center;
+}
+.modal-box p{color:#bac8dc;line-height:2;font-size:13px}
+.close{background:#253d5d;color:white;border:0;padding:10px 20px;border-radius:9px}
+@media(min-width:650px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  h1{font-size:49px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MRr <span>MihRab MD</span></div>
+  <nav>
+    <a href="#home">خانه</a>
+    <a href="#features">امکانات</a>
+    <a href="#commands">فرمان‌ها</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="tag">✦ NEXT GENERATION WHATSAPP BOT</div>
+  <h1>MRr <span>MihRab MD</span></h1>
+  <p>
+    ربات هوشمند واتساپ با امکانات متنوع،
+    مدیریت آسان و ابزارهای هوش مصنوعی.
+  </p>
+  <button class="btn green" onclick="connect()">اتصال واتساپ</button>
+  <a class="btn" href="#features">مشاهده امکانات</a>
+</div>
+
+<section>
+  <div class="status">
+    <span class="dot"></span>
+    وضعیت: هسته ربات هنوز متصل نشده است
+    <p>این صفحه فعلاً نسخه نمایشی وب‌سایت است.</p>
+  </div>
+</section>
+
+<section id="features">
+  <div class="heading">
+    <h2>امکانات ربات</h2>
+    <p>ابزارهای مختلف در یک ربات</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>AI Assistant</h3>
+      <p>پاسخ‌گویی هوشمند به پیام‌ها</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>Auto Reply</h3>
+      <p>پاسخ خودکار به پیام‌ها</p>
+    </div>
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h3>Media Tools</h3>
+      <p>ابزارهای رسانه‌ای و فایل‌ها</p>
+    </div>
+    <div class="card">
+      <div class="icon">👥</div>
+      <h3>Group Tools</h3>
+      <p>ابزارهای مدیریت گروه با مجوز لازم</p>
+    </div>
+    <div class="card">
+      <div class="icon">📋</div>
+      <h3>Command Menu</h3>
+      <p>منوی فرمان‌های ربات</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔐</div>
+      <h3>Security</h3>
+      <p>تنظیمات امنیت و دسترسی</p>
+    </div>
+  </div>
+</section>
+
+<section id="commands">
+  <div class="heading">
+    <h2>منوی فرمان‌ها</h2>
+    <p>نمونه فرمان‌های برنامه‌ریزی‌شده</p>
+  </div>
+  <div class="commands">
+    <p><b>.menu</b> — Main Menu</p>
+    <p><b>.ai</b> — AI Assistant</p>
+    <p><b>.auto</b> — Auto Reply</p>
+    <p><b>.media</b> — Media Tools</p>
+    <p><b>.groups</b> — Group Tools</p>
+    <p><b>.help</b> — Help Center</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">MRr MihRab MD</div>
+  Built with passion by MRr MihRab
+  <br>© 2026 MRr MihRab MD — All Rights Reserved
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h2>اتصال واتساپ</h2>
+    <p>
+      بخش اتصال هنوز به سرور ربات وصل نشده است.
+      پس از راه‌اندازی بک‌اند، روش اتصال امن را اینجا فعال می‌کنیم.
+    </p>
+    <button class="close" onclick="closeModal()">متوجه شدم</button>
+  </div>
+</div>
+
+<script>
+function connect(){
+  document.getElementById('modal').style.display='flex';
+}
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+</script>
+</body>
+</html>
